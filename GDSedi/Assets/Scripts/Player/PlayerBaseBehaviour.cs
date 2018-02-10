@@ -10,28 +10,62 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 	private bool hasUmbrella = false;
 	private bool hasStunball = false;
 
-	private int sadness;
+	private int sadness = 0;
 
+	private bool touchedSnow = false;
+	private bool touchedWind = false;
+	private bool touchedLightning = false;
 
+	private Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start() {
-		sadness = 0;
+		rb = GetComponent<Rigidbody2D>();
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
 		PowerupBehaviour powerup = col.gameObject.GetComponent<PowerupBehaviour>();
-		if(powerup == null) return;
+		if(powerup != null) {
+			touchedPowerup(powerup);
+			return;
+		}
 
+		AbilityBehaviour ability = col.gameObject.GetComponent<AbilityBehaviour>();
+		if(ability != null) {
+			touchedAbility(ability);
+			return;
+		}
+	}
+
+	void touchedPowerup(PowerupBehaviour powerup) {
 		switch(powerup.powerupType) {
 			case "SpeedPowerup":
-				StartCoroutine(getBoots(col.gameObject));
+				StartCoroutine(getBoots(powerup.gameObject));
 				break;
 			case "UmbrellaPowerup":
-				StartCoroutine(getUmbrella(col.gameObject));
+				StartCoroutine(getUmbrella(powerup.gameObject));
 				break;
 			case "StunPowerup":
-				StartCoroutine(getStunball(col.gameObject));
+				StartCoroutine(getStunball(powerup.gameObject));
+				break;
+			default:
+				break;
+		}
+	}
+
+	void touchedAbility(AbilityBehaviour ability) {
+		switch(ability.abilityType) {
+			case "RainAbility":
+				touchedRain();
+				break;
+			case "WindAbility":
+				StartCoroutine(getWind(ability.gameObject));
+				break;
+			case "SnowAbility":
+				StartCoroutine(getStunball(ability.gameObject));
+				break;
+			case "LightningAbility":
+				StartCoroutine(getStunball(ability.gameObject));
 				break;
 			default:
 				break;
@@ -41,6 +75,46 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 
+	}
+
+	private void touchedRain() {
+		sadness -= 5;
+	}
+
+	private IEnumerator getWind(GameObject wind) {
+		touchedWind = true;
+
+		rb.AddForce(new Vector2(20, 0), ForceMode2D.Impulse);
+
+		yield return new WaitForSeconds(2);
+		removeWind();
+	}
+	private void removeWind() {
+		touchedWind = false;
+	}
+
+	private IEnumerator getSnow() {
+		touchedSnow = true;
+
+		yield return new WaitForSeconds(2);
+		removeSnow();
+	}
+	private void removeSnow() {
+		touchedSnow = false;
+	}
+
+	private IEnumerator getLightning() {
+		touchedLightning = true;
+
+		yield return new WaitForSeconds(2);
+		removeLightning();
+	}
+	private void removeLightning() {
+		touchedLightning = false;
+	}
+
+	public bool canMove() {
+		return !touchedLightning || !touchedWind;
 	}
 
 	private IEnumerator getBoots(GameObject bootsPowerup) {
