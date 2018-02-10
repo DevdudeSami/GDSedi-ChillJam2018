@@ -19,6 +19,7 @@ public class AbilityBehaviour : MonoBehaviour {
  		if (pos.y - destinationHeight < 0) {
 			Destroy(this.gameObject);
 		} else if (pos.y - destinationHeight < 0.5f) {
+			print("collider active at " + pos.y);
 			GetComponent<BoxCollider2D>().enabled = true;
 		}
 	}
