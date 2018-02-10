@@ -26,8 +26,10 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 				StartCoroutine(getBoots(col.gameObject));
 				break;
 			case "UmbrellaPowerup":
+				StartCoroutine(getUmbrella(col.gameObject));
 				break;
 			case "StunPowerup":
+				StartCoroutine(getStunball(col.gameObject));
 				break;
 			default:
 				break;
