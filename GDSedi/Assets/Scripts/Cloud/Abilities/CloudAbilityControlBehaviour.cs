@@ -30,8 +30,13 @@ public class CloudAbilityControlBehaviour : MonoBehaviour {
 
 	void Next() {
 		selected = (selected + 1) % abilites.Length;
+		print(selected);
 	}
 	void Prev() {
-		selected = (selected - 1) % abilites.Length;
+		selected--;
+		if (selected < 0) {
+			selected = abilites.Length - 1;
+		}
+		print(selected);
 	}
 }
