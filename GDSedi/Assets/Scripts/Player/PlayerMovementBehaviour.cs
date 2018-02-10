@@ -11,11 +11,14 @@ public class PlayerMovementBehaviour : MonoBehaviour {
 	private Vector3 currentSpeed = new Vector3(0, 0, 0);
 	private Rigidbody2D rb;
 
+	private SpriteRenderer renderer;
+
 	private int footstepTimer = 0;
 	private const int footstepInterval = 12;
 
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
+		renderer = GetComponent<SpriteRenderer>();
 	}
 
 	void Update() {
@@ -29,8 +32,10 @@ public class PlayerMovementBehaviour : MonoBehaviour {
 
 		if(Input.GetKey(KeyCode.LeftArrow)) {
 			currentSpeed.x = -speed;
+			renderer.flipX = true;
 		} else if(Input.GetKey(KeyCode.RightArrow)) {
 			currentSpeed.x = speed;
+			renderer.flipX = false;
 		} else {
 			currentSpeed.x = 0;
 		}
@@ -46,7 +51,7 @@ public class PlayerMovementBehaviour : MonoBehaviour {
 		if(footstepTimer == footstepInterval) {
 			footstepTimer = 0;
 
-			Instantiate(footstepPrefab, this.transform.position, Quaternion.identity);
+			Instantiate(footstepPrefab, new Vector3(transform.position.x, transform.position.y-renderer.bounds.size.y/2, transform.position.z), Quaternion.identity);
 		}
 	}
 }
