@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class SmoothFollow : MonoBehaviour {
-    
+
 	// The target we are following
 	public Transform target;
 	// The distance in the x-z plane to the target
 	public float distance = 10.0f;
 	// the height we want the camera to be above the target
 	public float height = 5.0f;
-	// How much we 
+	// How much we
 	public float heightDamping = 2.0f;
 	public float rotationDamping = 3.0f;
 
@@ -29,13 +29,13 @@ public class SmoothFollow : MonoBehaviour {
 
 		// Damp the rotation around the y-axis
 		currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, rotationDamping * Time.deltaTime);
-	
+
 		// Damp the height
 		currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
 
 		// Convert the angle into a rotation
 		var currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
-	
+
 		// Set the position of the camera on the x-z plane to:
 		// distance meters behind the target
 		transform.position = target.position;
@@ -43,8 +43,10 @@ public class SmoothFollow : MonoBehaviour {
 
 		// Set the height of the camera
 		transform.position = new Vector3(transform.position.x,currentHeight,transform.position.z);
-	
+
 		// Always look at the target
 		transform.LookAt(target);
+
+    transform.rotation = new Quaternion(0,0,0,0);
 	}
 }
