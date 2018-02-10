@@ -8,10 +8,10 @@ public class PlayerMovementBehaviour : MonoBehaviour {
 
 	private Vector3 currentSpeed = new Vector3(0, 0, 0);
 
-	private Rigidbody rb;
+	private Rigidbody2D rb;
 
 	void Start() {
-		rb = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody2D>();
 	}
 
 	void Update() {
