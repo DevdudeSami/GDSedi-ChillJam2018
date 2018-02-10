@@ -6,12 +6,11 @@ public class PlayerMovementBehaviour : MonoBehaviour {
 
 	public GameObject footstepPrefab;
 
-	public float speed = 2.0f;
-
 	private Vector3 currentSpeed = new Vector3(0, 0, 0);
 	private Rigidbody2D rb;
 
 	private SpriteRenderer renderer;
+	private PlayerBaseBehaviour baseBehaviour;
 
 	private int footstepTimer = 0;
 	private const int footstepInterval = 12;
@@ -19,9 +18,12 @@ public class PlayerMovementBehaviour : MonoBehaviour {
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
 		renderer = GetComponent<SpriteRenderer>();
+		baseBehaviour = GetComponent<PlayerBaseBehaviour>();
 	}
 
 	void Update() {
+		float speed = baseBehaviour.speed;
+
 		if(Input.GetKey(KeyCode.UpArrow)) {
 			currentSpeed.y = speed;
 		} else if(Input.GetKey(KeyCode.DownArrow)) {
