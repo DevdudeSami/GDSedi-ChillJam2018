@@ -8,7 +8,7 @@ public class RainBehaviour : MonoBehaviour {
 	private int frames;
 
 	void Start () {
-		liveFrames = 20;
+		
 	}
 
 	void OnTrigger2D(Collider2D coll) {

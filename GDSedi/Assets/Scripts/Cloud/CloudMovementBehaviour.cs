@@ -5,11 +5,16 @@ using UnityEngine;
 public class CloudMovementBehaviour : MonoBehaviour {
 
 	public float SPEED = 1f;
+	public GameObject shadow;
+
+	private GameObject shadowInstance;
 
 	private Rigidbody2D rb;
 
 	void Awake () {
 		rb = this.gameObject.GetComponent<Rigidbody2D>();
+		Vector3 pos = this.gameObject.transform.position;
+		shadowInstance = Instantiate(shadow, new Vector3(pos.x, pos.y - 4f, 0), Quaternion.identity) as GameObject;
 	}
 
 	void Update () {
@@ -29,5 +34,7 @@ public class CloudMovementBehaviour : MonoBehaviour {
 		}
 
 		rb.velocity = new Vector3(xSpeed, ySpeed, 0);
+		Vector3 pos = this.gameObject.transform.position;
+		shadowInstance.transform.position = new Vector3(pos.x, pos.y - 4f, 0);
 	}
 }
