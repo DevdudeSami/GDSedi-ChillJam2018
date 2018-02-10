@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212851123647528320}
   - component: {fileID: 114790606833334342}
   - component: {fileID: 50114812167701594}
+  - component: {fileID: 114949159946718764}
   m_Layer: 0
   m_Name: LightningDrop
   m_TagString: Untagged
@@ -74,6 +75,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114949159946718764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543961871452456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383d5fae0a6d1481eaaa34c644b1f7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bolt: {fileID: 1272032535248366, guid: 09591cb2af4dc4074a411827ebff40f2, type: 2}
 --- !u!212 &212851123647528320
 SpriteRenderer:
   m_ObjectHideFlags: 1

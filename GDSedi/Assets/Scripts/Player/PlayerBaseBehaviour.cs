@@ -10,11 +10,13 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 	private bool hasUmbrella = false;
 	private bool hasStunball = false;
 
+	private int sadness;
+
 
 
 	// Use this for initialization
 	void Start() {
-
+		sadness = 0;
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {

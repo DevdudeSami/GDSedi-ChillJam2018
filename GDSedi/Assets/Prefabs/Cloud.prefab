@@ -96,7 +96,7 @@ MonoBehaviour:
   prefab: {fileID: 1543961871452456, guid: c533691789b61477397f2ce5e7b30c4c, type: 2}
   initialCharges: 0
   maxCharges: 1
-  rechargeInterval: 1500
+  rechargeInterval: 100
 --- !u!114 &114614375538066780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   prefab: {fileID: 1191731318908308, guid: f9e109514de174d7585492a9fe861ff9, type: 2}
   initialCharges: 5
   maxCharges: 5
-  rechargeInterval: 150
+  rechargeInterval: 75
 --- !u!212 &212584762541959484
 SpriteRenderer:
   m_ObjectHideFlags: 1

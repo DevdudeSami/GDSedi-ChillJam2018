@@ -12,10 +12,10 @@ public class RainBehaviour : MonoBehaviour {
 	}
 
 	void OnTrigger2D(Collider2D coll) {
-		// PlayerMovement player = coll.gameObject.GetComponent<PlayerMovement>();
-		// if (player != null) {
+		PlayerMovementBehaviour player = coll.gameObject.GetComponent<PlayerMovementBehaviour>();
+		if (player != null) {
 
-		// }
+		}
 	}
 
 	void Update () {

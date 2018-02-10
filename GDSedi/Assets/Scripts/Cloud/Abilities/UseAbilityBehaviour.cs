@@ -41,7 +41,7 @@ public class UseAbilityBehaviour : MonoBehaviour {
 		charges--;
 
 		Vector3 pos = this.gameObject.transform.position;
-		GameObject ability = Instantiate(prefab, new Vector3(pos.x, pos.y - 0.5f, 0), Quaternion.identity) as GameObject;
+		GameObject ability = Instantiate(prefab, new Vector3(pos.x, pos.y - 1f, 0), Quaternion.identity) as GameObject;
 
 		return true;
 	}
