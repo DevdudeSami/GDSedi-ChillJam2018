@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4927138838867086}
   - component: {fileID: 212851123647528320}
   - component: {fileID: 50114812167701594}
-  - component: {fileID: 114949159946718764}
-  - component: {fileID: 114527777843259668}
   - component: {fileID: 61182258352116976}
+  - component: {fileID: 114969063965508884}
+  - component: {fileID: 114662839861714836}
   m_Layer: 0
   m_Name: LightningDrop
   m_TagString: Untagged
@@ -78,10 +78,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.009485245, y: -0.33197904}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0.796875}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -89,7 +89,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7154465, y: 0.33604193}
   m_EdgeRadius: 0
---- !u!114 &114527777843259668
+--- !u!114 &114662839861714836
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,12 +97,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543961871452456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52fb5ff3ec3df4bb8bf1d277d59a5469, type: 3}
+  m_Script: {fileID: 11500000, guid: 9013e23d049a642f8a570cd38d753611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fallDistance: 3
   abilityType: LightningAbility
---- !u!114 &114949159946718764
+--- !u!114 &114969063965508884
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543961871452456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 383d5fae0a6d1481eaaa34c644b1f7ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 45a44f93355344669823f1dcccfa2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bolt: {fileID: 1272032535248366, guid: 09591cb2af4dc4074a411827ebff40f2, type: 2}
@@ -148,12 +148,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 43c71dec7ff944d5b9a5ebd342dcbc88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62f1125a9c50d4a63af0dd00219fd9bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

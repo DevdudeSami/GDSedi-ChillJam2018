@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CloudAbilityControlBehaviour : MonoBehaviour {
 
+	public GameObject selectedAbilityUI;
+
 	private int selected;
 	private UseAbilityBehaviour[] abilites;
 
