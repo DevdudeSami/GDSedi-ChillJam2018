@@ -7,7 +7,7 @@ public class UseAbilityBehaviour : MonoBehaviour {
 	public GameObject prefab;
 
 	private int charges;
-	private int maxCharges;
+	public int maxCharges;
 	public int rechargeInterval;
 
 	private int frame = 0;

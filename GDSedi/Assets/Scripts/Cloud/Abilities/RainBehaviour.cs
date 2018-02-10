@@ -5,17 +5,17 @@ using UnityEngine;
 public class RainBehaviour : MonoBehaviour {
 
 	private int liveFrames;
-	private int frame;
+	private int frames;
 
 	void Start () {
 		liveFrames = 20;
 	}
 
 	void OnTrigger2D(Collider2D coll) {
-		PlayerMovement player = coll.gameObject.GetComponent<PlayerMovement>();
-		if (player != null) {
-			
-		}
+		// PlayerMovement player = coll.gameObject.GetComponent<PlayerMovement>();
+		// if (player != null) {
+
+		// }
 	}
 
 	void Update () {
