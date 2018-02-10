@@ -6,6 +6,7 @@ public class CloudMovementBehaviour : MonoBehaviour {
 
 	public float SPEED = 1f;
 	public GameObject shadow;
+	public float shadowHeight;
 
 	private GameObject shadowInstance;
 
@@ -14,7 +15,7 @@ public class CloudMovementBehaviour : MonoBehaviour {
 	void Awake () {
 		rb = this.gameObject.GetComponent<Rigidbody2D>();
 		Vector3 pos = this.gameObject.transform.position;
-		shadowInstance = Instantiate(shadow, new Vector3(pos.x, pos.y - 4f, 0), Quaternion.identity) as GameObject;
+		shadowInstance = Instantiate(shadow, new Vector3(pos.x, pos.y - shadowHeight, 0), Quaternion.identity) as GameObject;
 	}
 
 	void Update () {
