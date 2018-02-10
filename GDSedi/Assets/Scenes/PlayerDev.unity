@@ -266,34 +266,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4272133993342370, guid: 44ebe729fb5594a638481ff984bb3b00,
     type: 2}
   m_PrefabInternal: {fileID: 478355095}
---- !u!1 &860380038
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 860380039}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &860380039
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 860380038}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &889317922 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4723670768249710, guid: 0ca0fa779c1914221a2e17f02e2ee0f7,
@@ -381,13 +353,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4928838467697424, guid: cd7f7f79a886f4d1cb885021f75a58b3, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114571434787312060, guid: cd7f7f79a886f4d1cb885021f75a58b3,
         type: 2}
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114571434787312060, guid: cd7f7f79a886f4d1cb885021f75a58b3,
+        type: 2}
+      propertyPath: footstepPrefab
+      value: 
+      objectReference: {fileID: 1542046153622214, guid: b2c68f6a223ba490ba81a5d66ebf2e71,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 54345276929108950, guid: cd7f7f79a886f4d1cb885021f75a58b3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cd7f7f79a886f4d1cb885021f75a58b3, type: 2}
@@ -677,5 +655,5 @@ Transform:
   - {fileID: 1590996922}
   - {fileID: 478355096}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
