@@ -332,6 +332,26 @@ Prefab:
       propertyPath: SPEED
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 61569498365279226, guid: 38db822229e1f4282b86a326a84ce1fe,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.03641343
+      objectReference: {fileID: 0}
+    - target: {fileID: 61569498365279226, guid: 38db822229e1f4282b86a326a84ce1fe,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.27555037
+      objectReference: {fileID: 0}
+    - target: {fileID: 61569498365279226, guid: 38db822229e1f4282b86a326a84ce1fe,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.088480085
+      objectReference: {fileID: 0}
+    - target: {fileID: 61569498365279226, guid: 38db822229e1f4282b86a326a84ce1fe,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.761283
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38db822229e1f4282b86a326a84ce1fe, type: 2}
   m_IsPrefabParent: 0
