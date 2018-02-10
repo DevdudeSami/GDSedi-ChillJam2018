@@ -7,6 +7,8 @@ public class UseAbilityBehaviour : MonoBehaviour {
 	public GameObject prefab;
 
 	private int charges;
+
+	public int initialCharges;
 	public int maxCharges;
 	public int rechargeInterval;
 
@@ -17,7 +19,7 @@ public class UseAbilityBehaviour : MonoBehaviour {
 	}
 
 	void Awake() {
-		charges = 1;
+		charges = initialCharges;
 	}
 
 	void Update() {

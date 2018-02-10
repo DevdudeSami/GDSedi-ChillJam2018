@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 114614375538066780}
   - component: {fileID: 114802577001877622}
   - component: {fileID: 114804892751159846}
+  - component: {fileID: 114027075077467796}
+  - component: {fileID: 114739261166712474}
+  - component: {fileID: 114469255907975040}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Untagged
@@ -64,6 +67,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114027075077467796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513914851439440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e520922bbd81e41fe8e6af0193634595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1102585578515502, guid: 4bd194e6fa5cd4a07abaf6d0e35e6ef3, type: 2}
+  initialCharges: 2
+  maxCharges: 4
+  rechargeInterval: 150
+--- !u!114 &114469255907975040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513914851439440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e520922bbd81e41fe8e6af0193634595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1543961871452456, guid: c533691789b61477397f2ce5e7b30c4c, type: 2}
+  initialCharges: 0
+  maxCharges: 1
+  rechargeInterval: 1500
 --- !u!114 &114614375538066780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,7 +108,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31c6d4de998b4ae0a2bc41aba554388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPEED: 1
+  SPEED: 10
+--- !u!114 &114739261166712474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513914851439440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e520922bbd81e41fe8e6af0193634595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1543961871452456, guid: 90add9b3a93b941ea9f4046d5f74f9d6, type: 2}
+  initialCharges: 1
+  maxCharges: 3
+  rechargeInterval: 250
 --- !u!114 &114802577001877622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,8 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e520922bbd81e41fe8e6af0193634595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  rechargeInterval: 0
+  prefab: {fileID: 1191731318908308, guid: f9e109514de174d7585492a9fe861ff9, type: 2}
+  initialCharges: 5
+  maxCharges: 5
+  rechargeInterval: 150
 --- !u!212 &212584762541959484
 SpriteRenderer:
   m_ObjectHideFlags: 1
