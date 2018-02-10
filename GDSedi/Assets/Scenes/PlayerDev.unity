@@ -324,6 +324,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &919648897 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4928838467697424, guid: cd7f7f79a886f4d1cb885021f75a58b3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1105565457}
 --- !u!58 &919648898
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -491,6 +496,7 @@ GameObject:
   - component: {fileID: 1614088620}
   - component: {fileID: 1614088619}
   - component: {fileID: 1614088618}
+  - component: {fileID: 1614088622}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -526,7 +532,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 2
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -561,6 +567,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614088622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614088617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c8329627e0d40d792e5808260b4fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 919648897}
+  distance: 10
+  height: 5
+  heightDamping: 2
+  rotationDamping: 3
 --- !u!1001 &1874828921
 Prefab:
   m_ObjectHideFlags: 0
