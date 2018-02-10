@@ -56,16 +56,16 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 	void touchedAbility(AbilityBehaviour ability) {
 		switch(ability.abilityType) {
 			case "RainAbility":
-				touchedRain();
+				touchedRain(ability.gameObject);
 				break;
 			case "WindAbility":
 				StartCoroutine(getWind(ability.gameObject));
 				break;
 			case "SnowAbility":
-				StartCoroutine(getStunball(ability.gameObject));
+				StartCoroutine(getSnow(ability.gameObject));
 				break;
 			case "LightningAbility":
-				StartCoroutine(getStunball(ability.gameObject));
+				StartCoroutine(getLightning(ability.gameObject));
 				break;
 			default:
 				break;
@@ -77,14 +77,16 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 
 	}
 
-	private void touchedRain() {
+	private void touchedRain(GameObject rain) {
 		sadness -= 5;
+		Destroy(rain);
 	}
 
 	private IEnumerator getWind(GameObject wind) {
 		touchedWind = true;
+		Destroy(wind);
 
-		rb.AddForce(new Vector2(20, 0), ForceMode2D.Impulse);
+		rb.AddForce(new Vector2(200, 0), ForceMode2D.Impulse);
 
 		yield return new WaitForSeconds(2);
 		removeWind();
@@ -93,8 +95,9 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 		touchedWind = false;
 	}
 
-	private IEnumerator getSnow() {
+	private IEnumerator getSnow(GameObject snow) {
 		touchedSnow = true;
+		Destroy(snow);
 
 		yield return new WaitForSeconds(2);
 		removeSnow();
@@ -103,8 +106,9 @@ public class PlayerBaseBehaviour : MonoBehaviour {
 		touchedSnow = false;
 	}
 
-	private IEnumerator getLightning() {
+	private IEnumerator getLightning(GameObject lightning) {
 		touchedLightning = true;
+		Destroy(lightning);
 
 		yield return new WaitForSeconds(2);
 		removeLightning();
