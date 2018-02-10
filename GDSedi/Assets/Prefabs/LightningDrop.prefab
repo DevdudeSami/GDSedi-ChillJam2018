@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4927138838867086}
   - component: {fileID: 212851123647528320}
-  - component: {fileID: 114790606833334342}
   - component: {fileID: 50114812167701594}
   - component: {fileID: 114949159946718764}
+  - component: {fileID: 114527777843259668}
+  - component: {fileID: 61182258352116976}
   m_Layer: 0
   m_Name: LightningDrop
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543961871452456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -15.888046, y: 1.5364375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +64,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114790606833334342
+--- !u!61 &61182258352116976
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543961871452456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009485245, y: -0.33197904}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0.796875}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7154465, y: 0.33604193}
+  m_EdgeRadius: 0
+--- !u!114 &114527777843259668
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -71,10 +97,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543961871452456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fbd30e4f606437595f87d037baff90, type: 3}
+  m_Script: {fileID: 11500000, guid: 52fb5ff3ec3df4bb8bf1d277d59a5469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  fallDistance: 3
+  abilityType: LightningAbility
 --- !u!114 &114949159946718764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 43c71dec7ff944d5b9a5ebd342dcbc88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

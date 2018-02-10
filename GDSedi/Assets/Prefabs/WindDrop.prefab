@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4927138838867086}
   - component: {fileID: 212851123647528320}
   - component: {fileID: 50114812167701594}
-  - component: {fileID: 114230228936356606}
+  - component: {fileID: 114926050625808532}
+  - component: {fileID: 61045156414322418}
   m_Layer: 0
   m_Name: WindDrop
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543961871452456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.521386, y: 1.374491, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,8 +62,33 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &114230228936356606
+  m_Constraints: 4
+--- !u!61 &61045156414322418
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543961871452456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.037940502, y: -0.33197856}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0.796875}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.69647694, y: 0.33604288}
+  m_EdgeRadius: 0
+--- !u!114 &114926050625808532
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -70,10 +96,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543961871452456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bae35951fac746a8a220a6af307ae47, type: 3}
+  m_Script: {fileID: 11500000, guid: 52fb5ff3ec3df4bb8bf1d277d59a5469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  fallDistance: 3
+  abilityType: WindAbility
 --- !u!212 &212851123647528320
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 37a3742dfdd254449856dfd2ef8febd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

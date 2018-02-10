@@ -108,7 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31c6d4de998b4ae0a2bc41aba554388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPEED: 10
+  SPEED: 5
+  shadow: {fileID: 1577348035731746, guid: d8d5a5b9bd35f4ec19104f6006c8ceeb, type: 2}
+  shadowHeight: 4
 --- !u!114 &114739261166712474
 MonoBehaviour:
   m_ObjectHideFlags: 1

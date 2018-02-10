@@ -15,12 +15,6 @@ public class LightningBehaviour : MonoBehaviour {
 		boltInstance = Instantiate(bolt, new Vector3(pos.x, pos.y, 0), Quaternion.identity) as GameObject;
 	}
 
-	void OnTrigger2D(Collider2D coll) {
-		PlayerMovementBehaviour player = coll.gameObject.GetComponent<PlayerMovementBehaviour>();
-		if (player != null) {
-
-		}
-	}
 
 	void Update () {
 		if (boltInstance != null) {
@@ -28,6 +22,7 @@ public class LightningBehaviour : MonoBehaviour {
 		}
 		if (frame > 15) {
 			Destroy(boltInstance);
+			this.enabled = false;
 		}
 
 		frame++;

@@ -2,23 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RainBehaviour : MonoBehaviour {
+public class AbilityBehaviour : MonoBehaviour {
 
-
-	public float startingHeight;
-	public float destinationHeight;
+	private float startingHeight;
+	private float destinationHeight;
 	public float fallDistance;
+	public string abilityType;
 
 	void Start () {
 		startingHeight = this.gameObject.transform.position.y;
 		destinationHeight = startingHeight - fallDistance;
-	}
-
-	void OnTrigger2D(Collider2D coll) {
-		PlayerMovementBehaviour player = coll.gameObject.GetComponent<PlayerMovementBehaviour>();
-		if (player != null) {
-
-		}
 	}
 
 	void Update () {
