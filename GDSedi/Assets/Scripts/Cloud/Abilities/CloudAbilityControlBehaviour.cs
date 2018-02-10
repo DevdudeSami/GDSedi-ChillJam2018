@@ -5,10 +5,10 @@ using UnityEngine;
 public class CloudAbilityControlBehaviour : MonoBehaviour {
 
 	private int selected;
-	private CloudAbility[] abilites;
+	private UseAbilityBehaviour[] abilites;
 
 	void Awake() {
-		abilites = this.gameObject.GetComponents<CloudAbility>();
+		abilites = this.gameObject.GetComponents<UseAbilityBehaviour>();
 		selected = 0;
 	}
 

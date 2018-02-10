@@ -2,29 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RainBehaviour : MonoBehaviour, CloudAbility {
+public class RainBehaviour : MonoBehaviour {
 
-	private int charges;
-	private int maxCharges;
+	private int liveFrames;
+	private int frame;
 
-	public int GetCharges() {
-		return charges;
+	void Start () {
+		liveFrames = 20;
 	}
 
-	void Awake() {
-
-	}
-
-	public bool PerformAbility() {
-		if (charges <= 0) {
-			return false;
+	void OnTrigger2D(Collider2D coll) {
+		PlayerMovement player = coll.gameObject.GetComponent<PlayerMovement>();
+		if (player != null) {
+			
 		}
-		charges--;
-		//TODO
-
-
-		return true;
 	}
 
-
+	void Update () {
+		if (frames > liveFrames) {
+			Destroy(this.gameObject);
+		}
+		frames++;
+	}
 }
