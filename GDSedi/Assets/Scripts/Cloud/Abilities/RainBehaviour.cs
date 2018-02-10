@@ -18,10 +18,12 @@ public class RainBehaviour : MonoBehaviour, CloudAbility {
 	public bool PerformAbility() {
 		if (charges <= 0) {
 			return false;
-		} else {
-			charges--;
-			//TODO
 		}
+		charges--;
+		//TODO
+
+
+		return true;
 	}
 
 
